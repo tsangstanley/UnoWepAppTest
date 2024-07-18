@@ -18,6 +18,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 8.0.x
+    - name: Install WASM tools
+      run: dotnet workload install wasm-tools
     - name: Restore Dependencies
       run: dotnet restore ./GitHub.UnoPages/GitHub.UnoPages/GitHub.UnoPages.csproj
     - name: Build 
