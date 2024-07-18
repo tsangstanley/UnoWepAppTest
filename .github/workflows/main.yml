@@ -24,7 +24,7 @@ jobs:
     - name: Restore Dependencies
       run: dotnet restore ./GitHub.UnoPages/GitHub.UnoPages/GitHub.UnoPages.csproj
     - name: Build 
-      run: dotnet build ./GitHub.UnoPages/GitHub.UnoPages/GitHub.UnoPages.csproj --no-restore -f $framework -c $config -p:WasmShellWebAppBasePath=./
+      run: dotnet build ./GitHub.UnoPages/GitHub.UnoPages/GitHub.UnoPages.csproj --no-restore -f net8.0-browserwasm -c Release -p:WasmShellWebAppBasePath=./
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
       if: github.event_name == 'workflow_dispatch' # Only deploy if Workflow manually ran
