@@ -20,6 +20,8 @@ jobs:
         dotnet-version: 8.0.x
     - name: Install WASM tools
       run: dotnet workload install wasm-tools
+    - name: Install Uno Themes
+      run: dotnet add package Uno.Themes.WinUI.Markup --version 5.0.13
     - name: Restore Dependencies
       run: dotnet restore ./GitHub.UnoPages/GitHub.UnoPages/GitHub.UnoPages.csproj
     - name: Build 
