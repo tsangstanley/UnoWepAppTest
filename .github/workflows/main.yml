@@ -19,14 +19,12 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 8.0.x
-    - name: Install WASM tools
-      run: dotnet workload install wasm-tools
-    #- name: Install Uno Themes
-    #  run: dotnet add package Uno.Themes.WinUI.Markup --version 5.0.13
+    #- name: Install WASM tools
+    #  run: dotnet workload install wasm-tools
     - name: Restore Dependencies
       run: dotnet restore ./GitHub.UnoPages/GitHub.UnoPages/GitHub.UnoPages.csproj
     - name: Build 
-      run: dotnet build ./GitHub.UnoPages/GitHub.UnoPages/GitHub.UnoPages.csproj --no-restore -f $framework -c $config
+      run: dotnet build ./GitHub.UnoPages/GitHub.UnoPages/GitHub.UnoPages.csproj --no-restore -f net8.0-browserwasm -c Release
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
       if: github.event_name == 'workflow_dispatch' # Only deploy if Workflow manually ran
