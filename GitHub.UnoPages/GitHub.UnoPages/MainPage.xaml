@@ -11,5 +11,6 @@
     <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
           Text="Hello Uno Platform"
           HorizontalAlignment="Center" />
+    <TextBlock AutomationProperties.AutomationId="AnotherTextBlock" Text="Some other test" HorizontalAlignment="Center" />
   </StackPanel>
 </Page>
