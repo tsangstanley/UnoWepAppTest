@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "GitHub.UnoPages",
+  "display": "standalone",
+  "name": "GitHub.UnoPages",
+  "short_name": "GitHub.UnoPages",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}
